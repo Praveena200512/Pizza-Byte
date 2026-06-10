@@ -11,7 +11,8 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://pizza-byte.vercel.app"
+  "https://pizza-byte.vercel.app",
+  "https://pizza-byte-o4rvenp8x-praveenas-projects-87f222f7.vercel.app"
 ];
 
 if (process.env.CLIENT_URL) {
