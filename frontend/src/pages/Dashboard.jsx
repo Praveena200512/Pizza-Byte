@@ -50,7 +50,17 @@ function Dashboard() {
             <h4>Latest Order Status</h4>
             <p>
               <strong>Status:</strong>{" "}
-              <span className="badge bg-danger">{latestOrder.orderStatus}</span>
+              <span
+                className={
+                  latestOrder.orderStatus === "Order Completed"
+                    ? "badge bg-success"
+                    : "badge bg-danger"
+                }
+              >
+                {latestOrder.orderStatus === "Order Completed"
+                  ? "✅ Order Completed"
+                  : latestOrder.orderStatus}
+              </span>
             </p>
             <p>
               <strong>Total:</strong> ₹{latestOrder.totalPrice}

@@ -21,7 +21,14 @@ function MyOrders() {
         <div className="card shadow-sm mb-3" key={order._id}>
           <div className="card-body">
             <h5>Order ID: {order._id}</h5>
-            <p><strong>Status:</strong> {order.orderStatus}</p>
+            <p>
+              <strong>Status:</strong>{" "}
+              {order.orderStatus === "Order Completed" ? (
+                <span className="badge bg-success">✅ Order Completed</span>
+              ) : (
+                <span className="badge bg-danger">{order.orderStatus}</span>
+              )}
+            </p>
             <p><strong>Payment:</strong> {order.paymentStatus}</p>
             <p><strong>Total:</strong> ₹{order.totalPrice}</p>
 

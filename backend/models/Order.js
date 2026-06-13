@@ -46,6 +46,7 @@ const orderSchema = new mongoose.Schema(
         "In the Kitchen",
         "Sent to Delivery",
         "Delivered",
+        "Order Completed"
       ],
       default: "Order Received",
     },

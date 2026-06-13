@@ -85,6 +85,7 @@ function AdminOrders() {
                   <option value="In the Kitchen">In the Kitchen</option>
                   <option value="Sent to Delivery">Sent to Delivery</option>
                   <option value="Delivered">Delivered</option>
+                  <option value="Order Completed">Order Completed ✅</option>
                 </select>
               </div>
             </div>
