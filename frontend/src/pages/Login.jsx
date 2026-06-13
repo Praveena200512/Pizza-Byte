@@ -7,9 +7,9 @@ import { auth, googleProvider } from "../firebase";
 function Login() {
   const navigate = useNavigate();
 
- const [email, setEmail] = useState("");
-const [password, setPassword] = useState("");
-const [error, setError] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   const submitHandler = async (e) => {
     e.preventDefault();

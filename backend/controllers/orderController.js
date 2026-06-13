@@ -47,11 +47,12 @@ const checkLowStockAndSendEmail = async () => {
 const placeOrder = async (req, res) => {
   try {
     const {
-      items,
-      totalPrice,
-      razorpayOrderId,
-      razorpayPaymentId
-    } = req.body;
+  items,
+  totalPrice,
+  deliveryAddress,
+  razorpayOrderId,
+  razorpayPaymentId
+} = req.body;
 
     if (!items || items.length === 0) {
       return res.status(400).json({ message: "No pizza items selected" });
@@ -80,6 +81,7 @@ const placeOrder = async (req, res) => {
       user: req.user._id,
       items,
       totalPrice,
+      deliveryAddress,
       paymentStatus: "paid",
       razorpayOrderId,
       razorpayPaymentId

@@ -50,7 +50,15 @@ const seedData = async () => {
       { name: "Mushroom", category: "veggie", stock: 50, threshold: 20, price: 30 },
 
       { name: "Chicken", category: "meat", stock: 50, threshold: 20, price: 90 },
-      { name: "Pepperoni", category: "meat", stock: 50, threshold: 20, price: 100 }
+      { name: "Pepperoni", category: "meat", stock: 50, threshold: 20, price: 100 },
+
+      { name: "Coca Cola", category: "drink", stock: 50, threshold: 20, price: 50 },
+      { name: "Sprite", category: "drink", stock: 50, threshold: 20, price: 50 },
+      { name: "Pepsi", category: "drink", stock: 50, threshold: 20, price: 50 },
+
+      { name: "French Fries", category: "side", stock: 50, threshold: 20, price: 80 },
+      { name: "Cheese Fries", category: "side", stock: 50, threshold: 20, price: 100 },
+      { name: "Garlic Bread", category: "side", stock: 50, threshold: 20, price: 90 }
     ]);
 
     console.log("Admin and inventory seeded successfully");

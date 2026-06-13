@@ -50,7 +50,7 @@ function Home() {
 
       <section className="features-section py-5">
         <div className="container">
-          <h2 className="text-center mb-5">Why Choose Pizza Builder?</h2>
+          <h2 className="text-center mb-5">Why Choose Pizza Byte?</h2>
 
           <div className="row">
             <FeatureCard

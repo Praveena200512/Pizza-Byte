@@ -10,51 +10,36 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-danger px-4 shadow-sm">
-      <Link className="navbar-brand fw-bold" to="/">
+    <nav className="custom-navbar">
+      <Link className="brand" to="/">
         🍕 Pizza Byte
       </Link>
 
-      <div className="ms-auto">
+      <div className="nav-links">
         {userInfo ? (
           <>
             {userInfo.user.role === "admin" ? (
               <>
-                <Link className="btn btn-light btn-sm me-2" to="/admin/dashboard">
-                  Admin
-                </Link>
-
-                <Link className="btn btn-warning btn-sm me-2" to="/admin/orders">
-                  Orders
-                </Link>
+                <Link to="/admin/dashboard">Admin</Link>
+                <Link to="/admin/orders">Orders</Link>
+                <Link to="/admin/inventory">Inventory</Link>
               </>
             ) : (
               <>
-                <Link className="btn btn-light btn-sm me-2" to="/dashboard">
-                  Dashboard
-                </Link>
-
-                <Link className="btn btn-warning btn-sm me-2" to="/my-orders">
-                  My Orders
-                </Link>
+                <Link to="/dashboard">Dashboard</Link>
+                <Link to="/my-orders">My Orders</Link>
+                <Link to="/build-pizza">Build Pizza</Link>
               </>
             )}
 
-            <span className="text-white me-3">Hi, {userInfo.user.name}</span>
+            <span className="user-name">Hi, {userInfo.user.name}</span>
 
-            <button className="btn btn-light btn-sm" onClick={logoutHandler}>
-              Logout
-            </button>
+            <button onClick={logoutHandler}>Logout</button>
           </>
         ) : (
           <>
-            <Link className="btn btn-light btn-sm me-2" to="/login">
-              Login
-            </Link>
-
-            <Link className="btn btn-warning btn-sm" to="/register">
-              Register
-            </Link>
+            <Link to="/login">Login</Link>
+            <Link to="/register">Register</Link>
           </>
         )}
       </div>

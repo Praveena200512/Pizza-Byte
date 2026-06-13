@@ -5,38 +5,38 @@ const orderSchema = new mongoose.Schema(
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
-      required: true
+      required: true,
     },
 
     items: [
       {
         itemId: {
           type: mongoose.Schema.Types.ObjectId,
-          ref: "Inventory"
+          ref: "Inventory",
         },
         name: String,
         category: String,
-        price: Number
-      }
+        price: Number,
+      },
     ],
 
     totalPrice: {
       type: Number,
-      required: true
+      required: true,
     },
 
     paymentStatus: {
       type: String,
       enum: ["pending", "paid"],
-      default: "pending"
+      default: "pending",
     },
 
     razorpayOrderId: {
-      type: String
+      type: String,
     },
 
     razorpayPaymentId: {
-      type: String
+      type: String,
     },
 
     orderStatus: {
@@ -45,12 +45,22 @@ const orderSchema = new mongoose.Schema(
         "Order Received",
         "In the Kitchen",
         "Sent to Delivery",
-        "Delivered"
+        "Delivered",
       ],
-      default: "Order Received"
-    }
+      default: "Order Received",
+    },
+
+    deliveryAddress: {
+      fullName: String,
+      phone: String,
+      address: String,
+      city: String,
+      pincode: String,
+    },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+  }
 );
 
 module.exports = mongoose.model("Order", orderSchema);
