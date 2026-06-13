@@ -42,6 +42,9 @@ function Dashboard() {
         <Link to="/build-pizza" className="btn btn-danger">
           Build Pizza
         </Link>
+        <Link to="/ready-pizza" className="btn btn-warning ms-2">
+          Order Ready-Made Pizza
+        </Link>
       </div>
 
       {latestOrder && (

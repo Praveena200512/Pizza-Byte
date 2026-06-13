@@ -58,7 +58,14 @@ const seedData = async () => {
 
       { name: "French Fries", category: "side", stock: 50, threshold: 20, price: 80 },
       { name: "Cheese Fries", category: "side", stock: 50, threshold: 20, price: 100 },
-      { name: "Garlic Bread", category: "side", stock: 50, threshold: 20, price: 90 }
+      { name: "Garlic Bread", category: "side", stock: 50, threshold: 20, price: 90 },
+
+      { name: "Margherita Pizza", category: "readyPizza", stock: 50, threshold: 20, price: 199 },
+      { name: "Farmhouse Pizza", category: "readyPizza", stock: 50, threshold: 20, price: 249 },
+      { name: "Paneer Pizza", category: "readyPizza", stock: 50, threshold: 20, price: 279 },
+      { name: "Veggie Delight Pizza", category: "readyPizza", stock: 50, threshold: 20, price: 229},
+      { name: "Chicken Pizza", category: "readyPizza", stock: 50, threshold: 20, price: 299 },
+      { name: "Pepperoni Pizza", category: "readyPizza", stock: 50, threshold: 20, price: 329 }
     ]);
 
     console.log("Admin and inventory seeded successfully");

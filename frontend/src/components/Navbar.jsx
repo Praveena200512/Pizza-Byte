@@ -29,6 +29,7 @@ function Navbar() {
                 <Link to="/dashboard">Dashboard</Link>
                 <Link to="/my-orders">My Orders</Link>
                 <Link to="/build-pizza">Build Pizza</Link>
+                <Link to="/ready-pizza">Ready Pizza</Link>
               </>
             )}
 

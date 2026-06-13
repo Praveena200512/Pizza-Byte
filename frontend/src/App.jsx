@@ -13,7 +13,7 @@ import VerifyEmail from "./pages/VerifyEmail";
 import Dashboard from "./pages/Dashboard";
 import BuildPizza from "./pages/BuildPizza";
 import MyOrders from "./pages/MyOrders";
-
+import ReadyPizza from "./pages/ReadyPizza";
 import AdminDashboard from "./admin/AdminDashboard";
 import Inventory from "./admin/Inventory";
 import AdminOrders from "./admin/AdminOrders";
@@ -83,6 +83,14 @@ function App() {
             <AdminRoute>
               <AdminOrders />
             </AdminRoute>
+          }
+        />
+        <Route
+          path="/ready-pizza"
+          element={
+            <ProtectedRoute>
+              <ReadyPizza />
+            </ProtectedRoute>
           }
         />
       </Routes>

@@ -9,7 +9,7 @@ const inventorySchema = new mongoose.Schema(
 
     category: {
       type: String,
-      enum: ["base", "sauce", "cheese", "veggie", "meat", "drink", "side"],
+      enum: ["base", "sauce", "cheese", "veggie", "meat", "drink", "side", "readyPizza"],
       required: true
     },
 
